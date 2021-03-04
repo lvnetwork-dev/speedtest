@@ -2,7 +2,7 @@
 su - ooklaserver
 
 # Baixe o renovador automático
-wget https://raw.githubusercontent.com/lvnetwork-dev/ssl-speedtest/main/certificado/renovaSSL.sh
+wget https://github.com/lvnetwork-dev/speedtest/blob/main/certificado-ssl/renovaSSL.sh
 
 # Saia do Usuário
 exit
