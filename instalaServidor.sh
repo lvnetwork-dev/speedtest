@@ -14,30 +14,56 @@ atualizaUbuntu() {
 }
 
 sshConecte(){
+	echo "teste"
 
-}
-
-instala1604(){
-   
 }
 
 instala1804(){
+	echo "Instalando Apache e PHP"
+	echo ""
+	apt -y install apache2 libapache2-mod-php7.2 php7.2 unzip apt-transport-https &&
+	echo "OK"
+	echo ""
 
+	delay 2s
+	
+	echo "Criando Usuario"
+	echo ""
+	addgroup ooklaserver && useradd -d /etc/ooklaserver -m -g ooklaserver -s /bin/bash ooklaserver
+	echo "OK"
+	echo ""
+
+	delay 2s
+
+	echo "Acessando Usuário - Baixando Pacote"
+	echo ""
+	su - ooklaserver &&
+	https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh &&
+	exit &&
+
+	echo "Instalando SpeedTest"
+	echo ""
+	chmod +x ooklaserver.sh && ./ooklaserver.sh install &&
+	echo ""
 }
 
-verVersao(){
+instala1604(){
+	apt -y install apache2 libapache2-mod-php7.0 php7.0 unzip apt-transport-https  
+}
+
+instalaCert(){
+	echo "teste"
+   
+}
+
+versaoUbuntu(){
     if [ "$versaoZbx" = "1" ]; then
-        instalaZbx40
+        instala1804
     elif [ "$versaoZbx" = "2" ]; then
-        instalaZbx50
+        instala1604
     else
         echo "OPCAO INVALIDA"
     fi
 }
 
-instalaFront(){
-    echo "FrontEnd"
-}
-
-selVersao
-verVersao
+versaoUbuntu
