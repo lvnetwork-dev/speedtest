@@ -113,6 +113,9 @@ confSpeedTest(){
 
 	echo "Configurando Arquivos..."
 
+	echo 'openSSL.server.privateKeyFile OoklaServer.allowedDomains = *.ookla.com, *.speedtest.net, *.$dominioProvedor' >> /etc/ooklaserver/OoklaServer.properties
+	echo 'openSSL.server.privateKeyFile OoklaServer.allowedDomains = *.ookla.com, *.speedtest.net, *.$dominioProvedor' >> /etc/ooklaserver/OoklaServer.properties.default
+
 	sed -i 's/ServerTokens OS/ServerTokens Prod/' /etc/apache2/conf-available/security.conf &&
 	sed -i 's/ServerSignature On/ServerSignature Off/' /etc/apache2/conf-available/security.conf &&
 
