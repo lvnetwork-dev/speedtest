@@ -4,7 +4,7 @@
 
 Em modo root:
 
-1º wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/instalaServidor.sh <br>
+1º: <code> wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/instalaServidor.sh </code> <br>
 
 2º chmod +x instalaServidor.sh <br>
 
