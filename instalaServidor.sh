@@ -64,10 +64,9 @@ confCertificado(){
 
 	echo '00 00 1 * * root /etc/ooklaserver/renovaSSL.sh' >> /etc/crontab && 
 
-	systemctl restart cron
+	systemctl restart cron &&
 
 	reboot
-
 }
 
 confSpeedTest(){
