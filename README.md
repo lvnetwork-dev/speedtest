@@ -2,6 +2,8 @@
 
 ## Repositório de Instalação e Configuração do Ookla SpeedTest.
 
+## Requisitos do Sistema
+
 Acesse o Ubuntu em Modo Root:
 
 <code> wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/instalaServidor.sh </code> <br>
