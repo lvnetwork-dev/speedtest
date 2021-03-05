@@ -58,9 +58,7 @@ confCertificado(){
 	./ooklaserver.sh stop &&
 	su ooklaserver -c  '/etc/ooklaserver/ooklaserver.sh start' &&
 
-	su - ooklaserver &&
-	wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/certificado-ssl/renovaSSL.sh &&
-	exit
+	su ooklaserver -c  'wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/certificado-ssl/renovaSSL.sh' &&
 
 	chmod +x /etc/ooklaserver/renovaSSL.sh &&
 
@@ -85,8 +83,8 @@ confSpeedTest(){
 	echo ""
 
 	su ooklaserver -c  'wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh --no-check-certificate' &&
-	chmod +x ooklaserver.sh &&
-	./ooklaserver.sh install &&
+	su ooklaserver -c  'chmod +x ooklaserver.sh' &&
+	su ooklaserver -c  './ooklaserver.sh install' &&
 	
 	echo "OK"
 	echo ""
