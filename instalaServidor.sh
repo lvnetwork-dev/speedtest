@@ -68,6 +68,8 @@ confCertificado(){
 
 	systemctl restart cron
 
+	reboot
+
 }
 
 confSpeedTest(){
@@ -83,8 +85,8 @@ confSpeedTest(){
 	echo ""
 
 	su ooklaserver -c  'wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh --no-check-certificate' &&
-	chmod +x ooklaserver.sh
-	./ooklaserver.sh install
+	chmod +x ooklaserver.sh &&
+	./ooklaserver.sh install &&
 	
 	echo "OK"
 	echo ""
