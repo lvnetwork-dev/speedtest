@@ -5,6 +5,17 @@ versaoUbuntu() {
     echo ""
     echo "[1] Ubuntu 18.04 | [2] Ubuntu 16.04"
     echo ""
+
+    read verUbuntu
+
+    if [ "$verUbuntu" = "1" ]; then
+        instala1804
+    elif [ "$verUbuntu" = "2" ]; then
+        instala1604
+    else
+        echo "Opcao Invalida..."
+        exit
+    fi
 }
 
 atualizaUbuntu() {
@@ -15,34 +26,6 @@ atualizaUbuntu() {
 
 sshConecte(){
 	echo "teste"
-}
-
-confSpeedTest(){
-	echo "Criando Usuario"
-	echo ""
-	addgroup ooklaserver && useradd -d /etc/ooklaserver -m -g ooklaserver -s /bin/bash ooklaserver &&
-	echo "OK"
-	echo ""	
-
-	delay 2
-
-	echo "Acessando Usuário - Baixando Pacote"
-	echo ""
-	su - ooklaserver &&
-	https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh &&
-	exit &&
-	echo "OK"
-	echo ""
-
-	delay 2
-
-	echo "Instalando SpeedTest"
-	echo ""
-	chmod +x ooklaserver.sh && ./ooklaserver.sh install &&
-	echo "OK"
-	echo ""
-
-	delay 2
 }
 
 confRcLocal(){
@@ -59,15 +42,99 @@ confRcLocal(){
 	sed -i 's/ServerSignature On/ServerSignature Off/' /etc/apache2/conf-available/security.conf
 }
 
-confOoklaServer(){
-	echo "teste"
+confCertificado(){
+	apt -y install letsencrypt python-certbot-apache &&
+	apache2ctl stop &&
+	letsencrypt --authenticator standalone --installer apache -n --agree-tos --email $emailProvedor -d $subDomProvedor &&
+
+	echo 'openSSL.server.certificateFile = /etc/letsencrypt/live/$subDomProvedor/fullchain.pem' >> /etc/ooklaserver/OoklaServer.properties
+	echo 'openSSL.server.privateKeyFile = /etc/letsencrypt/live/$subDomProvedor/privkey.pem'    >> /etc/ooklaserver/OoklaServer.properties
+	echo 'openSSL.server.certificateFile = /etc/letsencrypt/live/$subDomProvedor/fullchain.pem' >> /etc/ooklaserver/OoklaServer.properties.default
+	echo 'openSSL.server.privateKeyFile = /etc/letsencrypt/live/$subDomProvedor/privkey.pem' >> /etc/ooklaserver/OoklaServer.properties.default
+
+	chown ooklaserver. /etc/letsencrypt/ -R &&
+
+	cd /etc/ooklaserver &&
+	./ooklaserver.sh stop &&
+	su ooklaserver -c  '/etc/ooklaserver/ooklaserver.sh start' &&
+
+	su - ooklaserver &&
+	wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/certificado-ssl/renovaSSL.sh &&
+	exit
+
+	chmod +x /etc/ooklaserver/renovaSSL.sh &&
+
+	echo '00 00 1 * * root /etc/ooklaserver/renovaSSL.sh' >> /etc/crontab && 
+
+	systemctl restart cron
+
 }
 
-confCertificado(){
-	echo "teste"
+confSpeedTest(){
+	echo "Criando Usuario"
+	echo ""
+	addgroup ooklaserver && useradd -d /etc/ooklaserver -m -g ooklaserver -s /bin/bash ooklaserver &&
+	echo "OK"
+	echo ""	
+
+	delay 2
+
+	echo "Acessando Usuário - Baixando Pacote"
+	echo ""
+
+	su ooklaserver -c  'wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh --no-check-certificate' &&
+	chmod +x ooklaserver.sh
+	./ooklaserver.sh install
+	
+	echo "OK"
+	echo ""
+
+	delay 2
+
+	echo "Instalando SpeedTest"
+	echo ""
+	chmod +x ooklaserver.sh && ./ooklaserver.sh install &&
+	echo "OK"
+	echo ""
+
+	delay 2
+
+	echo "Informe o Dominio do Provedor:"
+	read dominioProvedor
+	echo ""
+
+	echo "Informe o Subdominio do Provedor:"
+	read subDomProvedor
+	echo ""
+
+	echo "Informe o Email do Provedor:"
+	read emailProvedor
+	echo ""
+
+	echo "Configurando Arquivos..."
+
+	sed -i 's/ServerTokens OS/ServerTokens Prod/' /etc/apache2/conf-available/security.conf &&
+	sed -i 's/ServerSignature On/ServerSignature Off/' /etc/apache2/conf-available/security.conf &&
+
+	wget https://github.com/lvnetwork-dev/speedtest/blob/main/resources/fallback.zip?raw=true &&
+
+	unzip fallback.zip /var/www/html/ &&
+
+	touch /var/www/html/crossdomain.xml
+
+	echo '<?xml version="1.0"?>' >> /var/www/html/crossdomain.xml
+	echo "<cross-domain-policy>" >> /var/www/html/crossdomain.xml
+	echo '<allow-access-from domain="*.speedtest.net" />' >> /var/www/html/crossdomain.xml
+	echo '<allow-access-from domain="*.ookla.com" />' >> /var/www/html/crossdomain.xml
+	echo '<allow-access-from domain="*.$dominioProvedor" />' >> /var/www/html/crossdomain.xml
+	echo "</cross-domain-policy>" >> /var/www/html/crossdomain.xml
+
+	confCertificado
 }
 
 instala1804(){
+	atualizaUbuntu
+
 	echo "Instalando Apache e PHP"
 	echo ""
 	apt -y install apache2 libapache2-mod-php7.2 php7.2 unzip apt-transport-https &&
@@ -79,9 +146,11 @@ instala1804(){
 }
 
 instala1604(){
+	atualizaUbuntu
+
 	echo "Instalando Apache e PHP"
 	echo ""
-	apt -y install apache2 libapache2-mod-php7.2 php7.2 unzip apt-transport-https &&
+	apt -y install apache2 libapache2-mod-php7.0 php7.0 unzip apt-transport-https &&
 	echo "OK"
 	echo ""
 	
@@ -89,42 +158,4 @@ instala1604(){
 	confRcLocal
 }
 
-versaoUbuntu(){
-    if [ "$versaoZbx" = "1" ]; then
-        instala1804
-    elif [ "$versaoZbx" = "2" ]; then
-        instala1604
-    else
-        echo "OPCAO INVALIDA"
-    fi
-}
-
-instalacaoAvancada() {
-    echo "[LV SPEEDTEST] Selecione o Tipo de Instacao:"
-    echo ""
-    echo "[1] Simples | [2] Avancada"
-    echo ""
-}
-
-instalacaoSimples(){
-
-}
-
-setup() {
-    echo "[LV SPEEDTEST] Selecione o Tipo de Instacao:"
-    echo ""
-    echo "[1] Simples | [2] Avancada"
-    echo ""
-
-    read tipoInstalacao
-
-    if [ "$tipoInstalacao" = "1" ]; then
-        instalacaoSimples
-    elif [ "$tipoInstalacao" = "2" ]; then
-        instalacaoAvancada
-    else
-        echo "OPCAO INVALIDA"
-    fi
-}
-
-setup
+versaoUbuntu

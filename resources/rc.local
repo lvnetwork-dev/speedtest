@@ -1,3 +1,0 @@
-#!/bin/sh
-su ooklaserver -c './etc/ooklaserver/OoklaServer --daemon'
-exit 0
