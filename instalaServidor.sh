@@ -24,7 +24,6 @@ atualizaUbuntu() {
 	apt-get update && apt-get -y upgrade &&
 	echo ""
 	echo "Ubuntu Atualizado!"
-	delay 5
 
 	echo "Informe o Dominio do Provedor:"
 	echo ""
@@ -43,8 +42,6 @@ atualizaUbuntu() {
 	read emailProvedor &&
 	echo ""
 	echo ""
-
-	delay 2
 }
 
 confRcLocal(){
@@ -102,8 +99,14 @@ confSpeedTest(){
 	echo "" &&
 
 	su ooklaserver -c  'wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh' &&
-	su ooklaserver -c  'chmod +x ooklaserver.sh' &&
-	su ooklaserver -c  './ooklaserver.sh install' &&
+
+	if [ "$verUbuntu" = "1" ]; then
+		su ooklaserver -c  'chmod +x ooklaserver.sh' &&
+		su ooklaserver -c  './ooklaserver.sh install' &&
+	else
+		"Erro ao Baixar o Arquivo..."
+		exit
+    fi
 	
 	echo "OK" &&
 	echo "" &&
@@ -128,7 +131,7 @@ confSpeedTest(){
 
 	delay 5
 
-	wget https://github.com/lvnetwork-dev/speedtest/blob/main/resources/fallback.zip?raw=true &&
+	wget https://github.com/lvnetwork-dev/speedtest/blob/main/resources/fallback.zip &&
 
 	unzip fallback.zip /var/www/html/ &&
 
