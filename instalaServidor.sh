@@ -25,6 +25,26 @@ atualizaUbuntu() {
 	echo ""
 	echo "Ubuntu Atualizado!"
 	delay 5
+
+	echo "Informe o Dominio do Provedor:"
+	echo ""
+	read dominioProvedor &&
+	echo ""
+	echo ""
+
+	echo "Informe o Subdominio do Provedor:"
+	echo ""
+	read subDomProvedor &&
+	echo ""
+	echo ""
+
+	echo "Informe o Email do Provedor:"
+	echo ""
+	read emailProvedor &&
+	echo ""
+	echo ""
+
+	delay 2
 }
 
 confRcLocal(){
@@ -74,7 +94,6 @@ confSpeedTest(){
 	echo "Criando Usuario"
 	echo ""
 	addgroup ooklaserver && useradd -d /etc/ooklaserver -m -g ooklaserver -s /bin/bash ooklaserver &&
-	echo "OK" &&
 	echo ""	&&
 
 	delay 2
@@ -82,7 +101,7 @@ confSpeedTest(){
 	echo "Acessando Usuário - Baixando Pacote" &&
 	echo "" &&
 
-	su ooklaserver -c  'wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh --no-check-certificate' &&
+	su ooklaserver -c  'wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh' &&
 	su ooklaserver -c  'chmod +x ooklaserver.sh' &&
 	su ooklaserver -c  './ooklaserver.sh install' &&
 	
@@ -98,24 +117,6 @@ confSpeedTest(){
 	echo "" &&
 
 	delay 2
-
-	echo "Informe o Dominio do Provedor:"
-	echo ""
-	read dominioProvedor &&
-	echo ""
-	echo ""
-
-	echo "Informe o Subdominio do Provedor:"
-	echo ""
-	read subDomProvedor &&
-	echo ""
-	echo ""
-
-	echo "Informe o Email do Provedor:"
-	echo ""
-	read emailProvedor &&
-	echo ""
-	echo ""
 
 	echo "Configurando os Arquivos..."
 
@@ -155,8 +156,6 @@ instala1804(){
 	apt -y install apache2 libapache2-mod-php7.2 php7.2 unzip apt-transport-https &&
 	echo "Apache Instalado!"
 	echo ""
-
-	delay 5
 
 	confSpeedTest	
 }
