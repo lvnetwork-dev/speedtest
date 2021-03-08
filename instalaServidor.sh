@@ -171,8 +171,6 @@ instala1604(){
 	apt -y install apache2 libapache2-mod-php7.0 php7.0 unzip apt-transport-https &&
 	echo "Apache Instalado!"
 	echo ""
-
-	delay 5
 	
 	confSpeedTest
 }
