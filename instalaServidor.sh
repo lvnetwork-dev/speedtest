@@ -90,34 +90,20 @@ confCertificado(){
 confSpeedTest(){
 	echo "Criando Usuario"
 	echo ""
-	addgroup ooklaserver && useradd -d /etc/ooklaserver -m -g ooklaserver -s /bin/bash ooklaserver &&
-	echo ""	&&
+	addgroup ooklaserver && 
+	useradd -d /etc/ooklaserver -m -g ooklaserver -s /bin/bash ooklaserver &&
+	echo ""
 
 	delay 2
 
 	echo "Acessando Usuário - Baixando Pacote" &&
-	echo "" &&
+	echo ""
 
 	su ooklaserver -c  'wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh' &&
-
-	if [ "$verUbuntu" = "1" ]; then
-		su ooklaserver -c  'chmod +x ooklaserver.sh' &&
-		su ooklaserver -c  './ooklaserver.sh install' &&
-	else
-		"Erro ao Baixar o Arquivo..."
-		exit
-    fi
+	su ooklaserver -c  'chmod +x ooklaserver.sh' &&
+	su ooklaserver -c  './ooklaserver.sh install' &&
 	
-	echo "OK" &&
-	echo "" &&
-
-	delay 2
-
-	echo "Instalando SpeedTest" &&
-	echo "" &&
-	chmod +x ooklaserver.sh && ./ooklaserver.sh install &&
-	echo "OK" &&
-	echo "" &&
+	echo "OK"
 
 	delay 2
 
@@ -131,7 +117,7 @@ confSpeedTest(){
 
 	delay 5
 
-	wget https://github.com/lvnetwork-dev/speedtest/blob/main/resources/fallback.zip &&
+	wget https://github.com/lvnetwork-dev/speedtest/raw/main/resources/fallback.zip &&
 
 	unzip fallback.zip /var/www/html/ &&
 
