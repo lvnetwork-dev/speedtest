@@ -3,45 +3,88 @@
   
   <head>
     <title>SpeedTest | LVNetwork</title>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="jquery.steps.css">
+    <link rel="stylesheet" href="app.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   </head>
 
-  <body>
+  <body style="background-color: #FFFFFF;">
 
-  <div class="jumbotron text-center">
-    <h1><img src="speedtest.png" class="img-fluid"></h1>
+  <div class="jumbotron text-center" style="background-image: linear-gradient(to bottom right, #6ffde1, #45e2f6);">
+    <img src="speedtest.png" class="img-fluid">
   </div>
     
   <div class="container">
-    
-    <div class="row">
 
-      <div class="col-sm-4">
+    <p>
+      <a href="https://account.ookla.com/login" target="_blank" class="btn btn-primary"> <i class="fas fa-tachometer-alt"></i> Ookla Account</a>
+      <a href="https://www.whatsmydns.net/" target="_blank" class="btn btn-primary"> <i class="fas fa-globe-americas"></i> WhatsMyDNS</a>
+      <a href="https://testeportas.com.br/" target="_blank" class="btn btn-primary"> <i class="fas fa-fire-alt"></i> Teste de Portas</a>
+      <button class="btn btn-info" name="btnReloadPage" id="btnReloadPage"><i class="fas fa-sync fa-spin"></i></button>
+    </p>
+
+    <hr>
+    
+    <div class="row" id="formulario">
+
+      <div class="col-sm-3">
         <div class="form-group">
-          <label>Selecione a Distribuição</label>
-          <select class="form-control" id="sel1">
-            <option value="1604">Ubuntu 16.04</option>
-            <option value="1804">Ubuntu 18.04</option>
+          <label><i class="fab fa-ubuntu"></i> Selecione a Distribuição:</label>
+          <select class="form-control" name="versaoOS" id="versaoOS">
+            <option value="1604">Ubuntu 16.04 - Xenial Xerus</option>
+            <option value="1804" selected>Ubuntu 18.04 - Bionic Beaver</option>
           </select>
         </div>
       </div>
 
-      <div class="col-sm-4">
-        <h3>Instalação</h3>
-        <input type="text" name="subDominio" id="subDominio">
-        <button type="button" name="btnGeraScript" id="btnGeraScript">OK</button>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label><i class="fas fa-envelope-open-text"></i> Email Ookla:</label>
+          <input type="email" class="form-control" name="emailProvedor" id="emailProvedor" value="nilson@techlabs.net.br">
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label><i class="fas fa-globe-americas"></i> Domínio do Provedor:</label>
+          <input type="text" class="form-control" name="dominioProvedor" id="dominioProvedor" value="techlabs.net.br">
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label><i class="fas fa-globe-americas"></i> URL SpeedTest:</label>
+          <input type="text" class="form-control" name="subDominio" id="subDominio" value="velocimetro.techlabs.net.br">
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="form-group">
+          <center> 
+            <button type="button" class="btn btn-primary btn-block" name="btnGeraScript" id="btnGeraScript">
+              Gerar Script de Configuração <span class="fas fa-spinner fa-pulse"></span>
+            </button>
+          </center>
+        </div>
       </div>
 
     </div>
 
     <div class="row">
 
-      <div class="col-sm-4">
+      <div class="col-sm-12">
+
+        <div id="scriptGerado"></div>
 
       </div>
 
@@ -49,6 +92,7 @@
 
   </div>
 
+  <script src="jquery.steps.js"></script>
   <script src="app.js"></script>
 
   </body>
