@@ -61,7 +61,7 @@ function addUsuario(wizard){
 function insOokla(wizard){
 	wizard.steps("add", {
 		title: "", 
-		content: '<h5>Baixe e execute o instalador dentro do usuário OoklaServer:</h5> <code> wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh <br> chmod 777 ooklaserver.sh <br> ./ooklaserver.sh install </code>'
+		content: '<h5>Baixe e execute o instalador dentro do usuário OoklaServer:</h5> <code> wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/resources/ooklaserver.sh <br> chmod 777 ooklaserver.sh <br> ./ooklaserver.sh install <br> exit</code>'
 	});
 }
 
