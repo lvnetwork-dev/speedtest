@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="jquery.steps.css">
-    <link rel="stylesheet" href="app.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -30,6 +29,7 @@
       <a href="https://account.ookla.com/login" target="_blank" class="btn btn-primary"> <i class="fas fa-tachometer-alt"></i> Ookla Account</a>
       <a href="https://www.whatsmydns.net/" target="_blank" class="btn btn-primary"> <i class="fas fa-globe-americas"></i> WhatsMyDNS</a>
       <a href="https://testeportas.com.br/" target="_blank" class="btn btn-primary"> <i class="fas fa-fire-alt"></i> Teste de Portas</a>
+      <a href="https://www.maxmind.com/en/geoip2-precision-demo" target="_blank" class="btn btn-primary"> <i class="fas fa-globe-americas"></i> MaxMind</a>
       <button class="btn btn-info" name="btnReloadPage" id="btnReloadPage"><i class="fas fa-sync fa-spin"></i></button>
     </p>
 
@@ -50,21 +50,21 @@
       <div class="col-sm-3">
         <div class="form-group">
           <label><i class="fas fa-envelope-open-text"></i> Email Ookla:</label>
-          <input type="email" class="form-control" name="emailProvedor" id="emailProvedor" value="nilson@techlabs.net.br">
+          <input type="email" class="form-control" name="emailProvedor" id="emailProvedor" autocomplete="off">
         </div>
       </div>
 
       <div class="col-sm-3">
         <div class="form-group">
           <label><i class="fas fa-globe-americas"></i> Domínio do Provedor:</label>
-          <input type="text" class="form-control" name="dominioProvedor" id="dominioProvedor" value="techlabs.net.br">
+          <input type="text" class="form-control" name="dominioProvedor" id="dominioProvedor" autocomplete="off">
         </div>
       </div>
 
       <div class="col-sm-3">
         <div class="form-group">
           <label><i class="fas fa-globe-americas"></i> URL SpeedTest:</label>
-          <input type="text" class="form-control" name="subDominio" id="subDominio" value="velocimetro.techlabs.net.br">
+          <input type="text" class="form-control" name="subDominio" id="subDominio" autocomplete="off">
         </div>
       </div>
 
