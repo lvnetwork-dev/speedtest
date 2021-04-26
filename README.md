@@ -36,4 +36,4 @@ Requisitos mínimos para submeter a aprovação.
 [![Teste de Portas](https://img.shields.io/badge/-TestePortas-c14438?style=flat-square&link=https://testeportas.com.br)](https://testeportas.com.br)
 [![MaxMind](https://img.shields.io/badge/-MaxMind-c14438?style=flat-square&link=https://www.maxmind.com/en/geoip2-precision-demo)](https://www.maxmind.com/en/geoip2-precision-demo)
 
-![Badge](https://img.shields.io/static/v1?label=TEXTO1&message=MENSAGEM&color=000&style=plastic&logo=https://simpleicons.org/icons/speedtest.svg)
+[![Badge](https://img.shields.io/static/v1?label=TEXTO1&message=MENSAGEM&color=000&style=plastic&logo=https://simpleicons.org/icons/speedtest.svg)](http://google.com)
