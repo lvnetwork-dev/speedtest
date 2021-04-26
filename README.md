@@ -1,10 +1,10 @@
 ![SpeedTest by Ookla](http://speedtest-ookla.techlabs.net.br/speedtest.png)
  
-## SpeedTest by Ookla
+## SpeedTest by Ookla :rocket:
  
-* Repositório de Instalação e Configuração do Ookla SpeedTest.
+* :grinning: Repositório de Instalação e Configuração do Ookla SpeedTest.
  
-## Requisitos do Sistema :grinning:
+## Requisitos do Sistema :computer:
 
 Requisitos mínimos para submeter a aprovação.
  
@@ -14,11 +14,11 @@ Requisitos mínimos para submeter a aprovação.
 * :heavy_check_mark: Armazenamento: 50GB
 * :heavy_check_mark: NIC: 1GB
 
-## Ferramenta de Apoio 
-:axe: [![Gerador de Script](https://img.shields.io/badge/-Acessar-c14438?style=flat-square&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
+## Ferramenta de Apoio :axe:
+[![Gerador de Script](https://img.shields.io/badge/-Acessar-c14438?style=flat-square&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
 
-## Versão
-:1234: 1.0
+## Versão :1234:
+![Badge](https://img.shields.io/badge/Versão-1.0-%237159c1?style=for-the-badge&logo=ghost)
 
 ## Nilson Pessim :smiling_face_with_three_hearts:
 
@@ -28,7 +28,7 @@ Requisitos mínimos para submeter a aprovação.
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:nilson@techlabs.net.br)](mailto:nilson@techlabs.net.br)
 
  
-## Links
+## Links :link:
 
 [![Gerador de Script](https://img.shields.io/badge/-Script-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
 [![Ookla Account](https://img.shields.io/badge/-Ookla-141526?style=flat-square&logo=Speedtest&logoColor=white&link=https://account.ookla.com)](https://account.ookla.com)
