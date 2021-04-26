@@ -8,7 +8,7 @@
 
 Requisitos mínimos para submeter a aprovação.
  
-* Sistema Operacional: Ubuntu 18.04 Server
+:cd: Sistema Operacional: Ubuntu 18.04 Server
 * Processador: 4 vCPU
 * Memória RAM: 8GB
 * Armazenamento: 50GB
@@ -20,7 +20,7 @@ Requisitos mínimos para submeter a aprovação.
 ## Versão
 1.0
 
-## Nilson Pessim
+## Nilson Pessim :smiling_face_with_three_hearts:
 
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/nilsonpessim)](https://github.com/nilsonpessim)
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://br.linkedin.com/in/nilsonpessim)](https://br.linkedin.com/in/nilsonpessim)
