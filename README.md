@@ -12,6 +12,9 @@ Requisitos mínimos para submeter a aprovação.
 * :heavy_check_mark: Armazenamento: 50GB
 * :heavy_check_mark: NIC: 1GB
 
+* :heavy_check_mark: Email para o Ookla Server
+* :heavy_check_mark: Subdomínio para Ookla Server
+
 ## Ferramentas de Apoio :axe:
 [![Gerador de Script](https://img.shields.io/badge/-Acessar-c14438?style=flat-square&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
 
