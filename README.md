@@ -11,6 +11,7 @@ Requisitos mínimos para submeter a aprovação.
 * :heavy_check_mark: Memória RAM: 8GB
 * :heavy_check_mark: Armazenamento: 50GB
 * :heavy_check_mark: NIC: 1GB
+* :heavy_check_mark: IP Público
 * :email: Email para o Ookla Server
 * :globe_with_meridians: Subdomínio para Ookla Server
 
