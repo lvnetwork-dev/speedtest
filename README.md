@@ -15,10 +15,10 @@ Requisitos mínimos para submeter a aprovação.
 ## Ferramentas de Apoio :axe:
 [![Gerador de Script](https://img.shields.io/badge/-Acessar-c14438?style=flat-square&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
 
-## Versão :1234:
+## Versão do Script :1234:
 ![Badge](https://img.shields.io/badge/Versão-1.0-%237159c1?style=for-the-badge&logo=ghost)
 
-## Nilson Pessim :smiling_face_with_three_hearts:
+## Desenvolvedor :smiling_face_with_three_hearts:
 
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/nilsonpessim)](https://github.com/nilsonpessim)
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://br.linkedin.com/in/nilsonpessim)](https://br.linkedin.com/in/nilsonpessim)
@@ -26,7 +26,7 @@ Requisitos mínimos para submeter a aprovação.
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:nilson@techlabs.net.br)](mailto:nilson@techlabs.net.br)
 
  
-## Links :link:
+## Links Úteis :link:
 
 [![Gerador de Script](https://img.shields.io/badge/-Script-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
 [![Ookla Account](https://img.shields.io/badge/-Ookla-141526?style=flat-square&logo=Speedtest&logoColor=white&link=https://account.ookla.com)](https://account.ookla.com)
