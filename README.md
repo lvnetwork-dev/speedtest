@@ -1,6 +1,6 @@
 ## SpeedTest by Ookla :rocket:
  
-* :grinning: Repositório de Instalação e Configuração do Ookla SpeedTest.
+* :star_struck: Repositório de Instalação e Configuração do Ookla SpeedTest.
  
 ## Requisitos do Sistema :computer:
 
