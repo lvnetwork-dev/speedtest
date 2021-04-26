@@ -30,8 +30,8 @@ Requisitos mínimos para submeter a aprovação.
  
 ## Links
 
-[![Gerador de Script](https://img.shields.io/badge/-Script-c14438?style=flat-square&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
+[![Gerador de Script](https://img.shields.io/badge/-Script-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
 [![Ookla Account](https://img.shields.io/badge/-Ookla-141526?style=flat-square&logo=Speedtest&logoColor=white&link=https://account.ookla.com)](https://account.ookla.com)
-[![Whats My DNS](https://img.shields.io/badge/-WhatsMyDNS-c14438?style=flat-square&link=https://www.whatsmydns.net)](https://www.whatsmydns.net)
-[![Teste de Portas](https://img.shields.io/badge/-TestePortas-c14438?style=flat-square&link=https://testeportas.com.br)](https://testeportas.com.br)
-[![MaxMind](https://img.shields.io/badge/-MaxMind-c14438?style=flat-square&link=https://www.maxmind.com/en/geoip2-precision-demo)](https://www.maxmind.com/en/geoip2-precision-demo)
+[![Whats My DNS](https://img.shields.io/badge/-WhatsMyDNS-3178C6?style=flat-square&link=https://www.whatsmydns.net)](https://www.whatsmydns.net)
+[![Teste de Portas](https://img.shields.io/badge/-TestePortas-FF0089?style=flat-square&link=https://testeportas.com.br)](https://testeportas.com.br)
+[![MaxMind](https://img.shields.io/badge/-MaxMind-37814A?style=flat-square&link=https://www.maxmind.com/en/geoip2-precision-demo)](https://www.maxmind.com/en/geoip2-precision-demo)
