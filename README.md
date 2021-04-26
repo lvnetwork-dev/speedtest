@@ -32,7 +32,7 @@ Requisitos mínimos para submeter a aprovação.
 
   - Gerador de Script: http://speedtest-ookla.techlabs.net.br
 
-  [![Ookla Account](https://img.shields.io/badge/-Ookla-000?style=flat-square&logo=Gmail&logoColor=white&link=https://account.ookla.com/login)](https://account.ookla.com/login)
+  [![Ookla Account](https://img.shields.io/badge/-Ookla-000?style=flat-square&link=https://account.ookla.com/login)](https://account.ookla.com/login)
 
   - Whats My DNS: https://www.whatsmydns.net
   - Teste de Portas: https://testeportas.com.br
