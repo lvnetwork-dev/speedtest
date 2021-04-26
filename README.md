@@ -32,9 +32,9 @@ Requisitos mínimos para submeter a aprovação.
 
   - Gerador de Script: http://speedtest-ookla.techlabs.net.br
 
-  [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:nilson@techlabs.net.br)](mailto:nilson@techlabs.net.br)
+  [![Gmail Badge](https://img.shields.io/badge/-Ookla-000?style=flat-square&logo=Gmail&logoColor=white&link=https://account.ookla.com/login)]
 
-  - Ookla Account: https://account.ookla.com/login
+  - Ookla Account: 
   - Whats My DNS: https://www.whatsmydns.net
   - Teste de Portas: https://testeportas.com.br
   - MaxMind: https://www.maxmind.com/en/geoip2-precision-demo
