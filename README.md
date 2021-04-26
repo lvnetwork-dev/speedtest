@@ -1,5 +1,3 @@
-![SpeedTest by Ookla](http://speedtest-ookla.techlabs.net.br/speedtest.png)
- 
 ## SpeedTest by Ookla :rocket:
  
 * :grinning: Repositório de Instalação e Configuração do Ookla SpeedTest.
@@ -14,7 +12,7 @@ Requisitos mínimos para submeter a aprovação.
 * :heavy_check_mark: Armazenamento: 50GB
 * :heavy_check_mark: NIC: 1GB
 
-## Ferramenta de Apoio :axe:
+## Ferramentas de Apoio :axe:
 [![Gerador de Script](https://img.shields.io/badge/-Acessar-c14438?style=flat-square&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
 
 ## Versão :1234:
