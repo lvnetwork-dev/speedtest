@@ -4,7 +4,7 @@
  
 * Repositório de Instalação e Configuração do Ookla SpeedTest.
  
-## Requisitos do Sistema
+## Requisitos do Sistema :grinning:
 
 Requisitos mínimos para submeter a aprovação.
  
@@ -15,7 +15,7 @@ Requisitos mínimos para submeter a aprovação.
 * NIC: 1GB
 
 ## Ferramenta de Apoio
-* "http://speedtest-ookla.techlabs.net.br/"
+[![Gerador de Script](https://img.shields.io/badge/-Acessar-c14438?style=flat-square&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
 
 ## Versão
 1.0
