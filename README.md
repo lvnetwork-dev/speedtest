@@ -8,11 +8,11 @@
 
 Requisitos mínimos para submeter a aprovação.
  
-:cd: Sistema Operacional: Ubuntu 18.04 Server
-:heavy_check_mark: Processador: 4 vCPU
-:heavy_check_mark: Memória RAM: 8GB
-:heavy_check_mark: Armazenamento: 50GB
-:heavy_check_mark: NIC: 1GB
+* :cd: Sistema Operacional: Ubuntu 18.04 Server
+* :heavy_check_mark: Processador: 4 vCPU
+* :heavy_check_mark: Memória RAM: 8GB
+* :heavy_check_mark: Armazenamento: 50GB
+* :heavy_check_mark: NIC: 1GB
 
 ## Ferramenta de Apoio 
 :axe: [![Gerador de Script](https://img.shields.io/badge/-Acessar-c14438?style=flat-square&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
