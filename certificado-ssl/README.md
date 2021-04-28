@@ -1,4 +1,4 @@
-## Renovar Certificado :gear:
+## Script para Renovação do Certificado SSL :gear:
 * :star_struck: Instruções para renovar o certificado SSL.
  
 ## Procedimentos :crossed_swords:
