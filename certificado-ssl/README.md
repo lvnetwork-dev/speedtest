@@ -1,29 +1,29 @@
 ## Renovar Certificado :gear:
-* :star_struck: Repositório para renovar o certificado SSL.
+* :star_struck: Instruções para renovar o certificado SSL.
  
-## Procedimentos:
-* Entre com o Usuário OoklaServer:
+## Procedimentos :crossed_swords:
+* Entre com o Usuário OoklaServer
 >    $ su - ooklaserver
 
-* Baixe o renovador automático:
+* Baixe o renovador automático
 >    $ wget https://raw.githubusercontent.com/lvnetwork-dev/speedtest/main/certificado-ssl/renovaSSL.sh
 
-* Saia do Usuário:
+* Saia do Usuário
 >    $ exit
 
-* Transforme o arquivo em um executável:
+* Transforme o arquivo em um executável
 >    $ chmod +x /etc/ooklaserver/renovaSSL.sh
 
-* Inclua o Script na Cron:
+* Inclua o Script na Cron
 >    $ echo '00 00   1 * *   root    /etc/ooklaserver/renovaSSL.sh' >> /etc/crontab
 
-* Reinicie a Cron:
+* Reinicie a Cron
 >    $ systemctl restart cron
 
-* Veja a inclusão no arquivo:
+* Veja a inclusão no arquivo
 >    $ cat /etc/crontab
 
-* Execute o Script:
+* Execute o Script
 >    $ ./etc/ooklaserver/renovaSSL.sh
 
 
