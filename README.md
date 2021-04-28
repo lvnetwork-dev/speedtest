@@ -17,7 +17,7 @@ Requisitos mínimos para submeter a aprovação.
 [![Gerador de Script](https://img.shields.io/badge/Versão-1.0-%237159c1?style=for-the-badge&logo=ghost&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
 
 
-## Desenvolvedor :smiling_face_with_three_hearts:
+## Desenvolvedor :heart_eyes_cat:
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/nilsonpessim)](https://github.com/nilsonpessim)
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://br.linkedin.com/in/nilsonpessim)](https://br.linkedin.com/in/nilsonpessim)
 [![Whatsapp Badge](https://img.shields.io/badge/-Whatsapp-4CA143?style=flat-square&labelColor=4CA143&logo=whatsapp&logoColor=white&link=https://api.whatsapp.com/send?phone=5537999351046)](https://api.whatsapp.com/send?phone=5537999351046)
