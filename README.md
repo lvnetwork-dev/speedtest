@@ -13,6 +13,22 @@ Requisitos mínimos para submeter a aprovação.
 * :email: Email para o Ookla Server
 * :globe_with_meridians: Subdomínio para Ookla Server
 
+## :axe: SpeedTest CLI
+Execute o SpeedTest Client pela CLI do Ubuntu
+
+* Instale o CURL
+>    $ apt -y install curl
+
+* Baixe o Instalador
+>    $ curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
+
+* Inicie a Instalação
+>    $ apt-get install speedtest
+
+* Executar o Speedtest
+>    $ speedtest
+ 
+
 ## :axe: Ferramentas de Apoio
 [![Gerador de Script](https://img.shields.io/badge/Versão-1.0-%237159c1?style=for-the-badge&logo=ghost&link=http://speedtest-ookla.techlabs.net.br)](http://speedtest-ookla.techlabs.net.br)
 
